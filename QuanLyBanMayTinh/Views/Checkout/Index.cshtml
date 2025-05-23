@@ -1,0 +1,7 @@
+﻿@model Order
+
+<h2>Thông tin giao hàng</h2>
+<form asp-action="Submit" method="post">
+    <input asp-for="ShippingAddress" placeholder="Địa chỉ giao hàng" /><br />
+    <button type="submit">Đặt hàng</button>
+</form>

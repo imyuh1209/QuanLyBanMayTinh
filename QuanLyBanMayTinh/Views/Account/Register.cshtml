@@ -1,0 +1,9 @@
+﻿@model User
+
+<h2>Đăng ký</h2>
+<form asp-action="Register" method="post">
+    <p>Tên đăng nhập</p><input asp-for="Username" /><br />
+    <p>Email</p><input asp-for="Email" /><br />
+    <p>Mật khẩu</p><input asp-for="Password" type="password" /><br />
+    <button type="submit">Đăng ký</button>
+</form>

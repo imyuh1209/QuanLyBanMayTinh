@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Order>
+
+<h2>Lịch sử đơn hàng</h2>
+@foreach (var order in Model)
+{
+    <p>Đơn @order.Id - @order.OrderDate.ToShortDateString()</p>
+    <a asp-action="Details" asp-route-id="@order.Id">Xem chi tiết</a>
+}

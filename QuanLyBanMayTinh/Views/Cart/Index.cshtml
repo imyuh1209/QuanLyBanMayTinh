@@ -1,0 +1,14 @@
+﻿@model List<Product>
+
+<h2>Giỏ hàng</h2>
+<table>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Name</td>
+            <td>@item.Price ₫</td>
+            <td><a asp-action="Remove" asp-route-id="@item.Id">Xóa</a></td>
+        </tr>
+    }
+</table>
+<a asp-controller="Checkout" asp-action="Index">Thanh toán</a>

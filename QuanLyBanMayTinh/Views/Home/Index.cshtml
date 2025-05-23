@@ -1,0 +1,12 @@
+﻿
+@model IEnumerable<Product>
+
+<h2>Danh sách sản phẩm</h2>
+@foreach (var item in Model)
+{
+    <div>
+        <h4>@item.Name</h4>
+        <p>@item.Price ₫</p>
+        <a asp-controller="Product" asp-action="Details" asp-route-id="@item.Id">Xem chi tiết</a>
+    </div>
+}

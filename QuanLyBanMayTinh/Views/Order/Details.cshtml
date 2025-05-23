@@ -1,0 +1,15 @@
+﻿@model Order
+
+<h2>Chi tiết đơn hàng #@Model.Id</h2>
+<p>Ngày: @Model.OrderDate</p>
+<p>Địa chỉ: @Model.ShippingAddress</p>
+<table>
+    @foreach (var item in Model.OrderDetails)
+    {
+        <tr>
+            <td>@item.Product.Name</td>
+            <td>@item.Quantity</td>
+            <td>@item.Price ₫</td>
+        </tr>
+    }
+</table>

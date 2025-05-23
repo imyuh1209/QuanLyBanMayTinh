@@ -1,0 +1,9 @@
+﻿@model Product
+<h2>Thêm sản phẩm</h2>
+<form asp-action="Create" method="post">
+    <input asp-for="Name" placeholder="Tên sản phẩm" /><br />
+    <input asp-for="Price" placeholder="Giá" /><br />
+    <input asp-for="ImageUrl" placeholder="Ảnh URL" /><br />
+    <textarea asp-for="Description" placeholder="Mô tả"></textarea><br />
+    <button type="submit">Lưu</button>
+</form>
